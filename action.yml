@@ -133,7 +133,7 @@ inputs:
     required: false
     default: false
   containerName: 
-    descritpion: |
+    description: |
       'Container name to deploy.'
     required: false
 runs:
