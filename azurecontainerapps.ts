@@ -620,6 +620,11 @@ export class azurecontainerapps {
         } else if (!this.util.isNullOrEmpty(this.appSourcePath) && this.useInternalRegistry) {
             this.commandLineArgs.push(`--source ${this.appSourcePath}`);
         }
+
+        // In a multi-container context, we must provide the name of the container to either update or create...
+        if (!this.util.isNullOrEmpty(this.toolHelper.getInput('containerName', false))) {
+            this.commandLineArgs.push(`--container-name ${this.toolHelper.getInput('containerName', false)}`);
+        }
     }
 
     /**
