@@ -10,7 +10,11 @@ export class Utility {
    * @param continueOnError - whether or not to continue execution if the command fails
    */
 
-  public async execute(commandLine: string, args?: string[], inputOptions?:Buffer): Promise<{ exitCode: number, stdout: string, stderr: string }> {
+  public async execute(
+    commandLine: string,
+    args?: string[],
+    inputOptions?: Buffer
+  ): Promise<{ exitCode: number; stdout: string; stderr: string }> {
     return await toolHelper.exec(commandLine, args, inputOptions);
   }
 
@@ -27,6 +31,6 @@ export class Utility {
    * @returns true if the string is null, undefined or empty, false otherwise
    */
   public isNullOrEmpty(str: string): boolean {
-    return str === null || str === undefined || str === "";
+    return str === null || str === undefined || str === '';
   }
 }

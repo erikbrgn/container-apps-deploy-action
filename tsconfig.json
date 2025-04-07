@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
-    /* Base Options: */
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "declarationMap": false,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "target": "es2022",
-    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["ES2022"],
+    "newLine": "lf",
+    // "noImplicitAny": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": false,
+    "pretty": true,
     "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "isolatedModules": true,
-
-    /* Strictness */
     // "strict": true,
-    // "noUncheckedIndexedAccess": true,
-    // "noImplicitOverride": true,
+    // "strictNullChecks": true,
+    "target": "ES2022",
 
-    /* If transpiling with TypeScript: */
     "module": "NodeNext",
-    "outDir": "dist",
-    "rootDir": "src"
+    "moduleResolution": "NodeNext"
   },
   "include": ["src"]
 }

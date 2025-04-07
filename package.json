@@ -2,10 +2,11 @@
   "name": "container-apps-deploy-action",
   "version": "1.0.0",
   "description": "This action allows users to easily deploy their application source to an [Azure Container App](https://azure.microsoft.com/en-us/services/container-apps/) in their GitHub workflow by either providing a previously built image, a Dockerfile that an image can be built from, or using a builder to create a runnable application image for the user.",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "npx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,11 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/node": "^20.6.0"
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^20.6.0",
+    "rollup": "^4.39.0",
+    "tslib": "^2.8.1"
   }
 }
