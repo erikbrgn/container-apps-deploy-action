@@ -2,8 +2,8 @@ name: 'Azure Container Apps Build and Deploy'
 description: |
   'GitHub Action for building and deploying Azure Container Apps'
 branding:
-  icon: "login.svg"
-  color: "blue"
+  icon: 'login.svg'
+  color: 'blue'
 inputs:
   appSourcePath:
     description: 'Absolute path on the GitHub runner of the source application code to be built.'
@@ -139,11 +139,11 @@ inputs:
       this GitHub Action.'
     required: false
     default: false
-  containerName: 
+  containerName:
     description: |
       'Container name to deploy.'
     required: false
-    
+
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
