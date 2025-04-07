@@ -1,4 +1,4 @@
 # .gitignore
 node_modules/
 *.js
-!dist/index.js
+!dist/*.js
