@@ -1,8 +1,23 @@
 {
-    "compilerOptions": {
-      "target": "ES2016",
-      "module": "CommonJS",
-      "moduleResolution": "node",
-      "lib": ["es2018", "dom"],
-    }
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    /* Strictness */
+    // "strict": true,
+    // "noUncheckedIndexedAccess": true,
+    // "noImplicitOverride": true,
+
+    /* If transpiling with TypeScript: */
+    "module": "NodeNext",
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"]
 }
