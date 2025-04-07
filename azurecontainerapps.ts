@@ -2,9 +2,9 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { ContainerAppHelper } from './src/ContainerAppHelper';
 import { ContainerRegistryHelper } from './src/ContainerRegistryHelper';
+import { GitHubActionsToolHelper } from './src/GitHubActionsToolHelper';
 import { TelemetryHelper } from './src/TelemetryHelper';
 import { Utility } from './src/Utility';
-import { GitHubActionsToolHelper } from './src/GitHubActionsToolHelper';
 
 const buildArgumentRegex = /"[^"]*"|\S+/g;
 const buildpackEnvironmentNameRegex = /^"?(BP|ORYX)_[-._a-zA-Z0-9]+"?$/
